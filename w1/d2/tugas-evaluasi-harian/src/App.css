@@ -1,0 +1,53 @@
+.background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+	background-color: hsl(185, 75%, 39%); /* default light */
+	transition: background 0.3s, color 0.3s;
+}
+
+/* dark mode */
+.background.dark {
+	background-color: #0f172a; /* dark slate */
+	color: #e2e8f0;
+}
+
+/* utility */
+.hidden {
+	display: none;
+}
+
+/* section row untuk cards */
+.task-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+	gap: 20px;
+	padding: 40px;
+	width: 100%;
+	max-width: 1200px;
+	justify-items: center;
+	align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .task-section {
+    grid-template-columns: repeat(3, 1fr); /* tablet besar */
+  }
+}
+
+@media (max-width: 768px) {
+  .task-section {
+    grid-template-columns: repeat(2, 1fr); /* tablet kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .task-section {
+    grid-template-columns: 1fr; /* HP */
+  }
+}
+
