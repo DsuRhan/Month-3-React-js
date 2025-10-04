@@ -2,6 +2,7 @@
 export default function Card({ children }) {
   return (
     <div style={{
+        color: "#333",
       border: "2px solid #333",
       borderRadius: "10px",
       padding: "15px",

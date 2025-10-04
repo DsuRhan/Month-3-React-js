@@ -1,0 +1,16 @@
+.card {
+  border: 1px solid #888;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.primary {
+  background-color: #d1e8ff;
+  color: #003366;
+}
+
+.secondary {
+  background-color: #f9e6ff;
+  color: #330033;
+}
