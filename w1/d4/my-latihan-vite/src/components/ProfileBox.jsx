@@ -38,7 +38,7 @@ export default function ProfileBox() {
       </div>
       <div style={boxStyle3}>
         <h3>FYI</h3>
-        <p>ini inline style</p>
+        <p>Sebagian Inner Text diisi oleh AI super pintar Lune (〃￣ω￣〃)ゞ</p>
       </div>
     </div>
   );

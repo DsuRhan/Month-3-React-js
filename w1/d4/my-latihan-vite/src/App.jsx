@@ -6,6 +6,7 @@ import ResponsiveBox from "./components/ResponsiveBox";
 
 function App() {
   return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", backgroundColor: "#f9f9f9", background: "gray" }}>
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
       <h2>🧭 Evaluasi Styling React</h2>
 
@@ -26,7 +27,7 @@ function App() {
 
       <h3>5. Responsive Component</h3>
       <ResponsiveBox />
-    </div>
+    </div></div>
   );
 }
 
