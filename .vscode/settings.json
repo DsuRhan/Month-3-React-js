@@ -1,0 +1,33 @@
+{
+  // ======== Formatting ========
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // gunakan Prettier untuk format otomatis
+
+  // ======== ESLint ========
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.alwaysShowStatus": true,
+
+  // ======== TypeScript ========
+  "typescript.tsdk": "node_modules/typescript/lib", // gunakan TS lokal project
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // ======== Editor Feel ========
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // ======== Error Lens ========
+  "errorLens.enabled": true,
+  "errorLens.fontWeight": "600",
+  "errorLens.fontSize": "13px",
+
+  // ======== Misc ========
+  "files.associations": {
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact"
+  }
+}
