@@ -38,3 +38,6 @@ export default function ProfilerExample() {
     </div>
   );
 }
+// Jalankan React DevTools → tab Profiler → tekan “Start profiling” lalu klik tombol di atas.
+// Kau akan melihat komponen “slow” memakan waktu jauh lebih lama dari “fast”.
+// Untuk mengoptimalkan, ubah logika slowTask jadi useMemo.

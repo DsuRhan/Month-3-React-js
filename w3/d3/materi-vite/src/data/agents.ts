@@ -67,7 +67,7 @@ export const agents: Agent[] = [
   },
   {
     name: "Hugo Vlad",
-    partial: "https://images.weserv.nl/?url=static.wikia.nocookie.net/zenless-zone-zero/images/5/5e/Mindscape_Hugo_Vlad_Full.png",
+    partial: "https://images.weserv.nl/?url=https://static.wikia.nocookie.net/zenless-zone-zero/images/1/15/Mindscape_Hugo_Vlad_Partial.png/revision/latest/scale-to-width-down/1000?cb=20250514090938",
     full:"https://images.weserv.nl/?url=static.wikia.nocookie.net/zenless-zone-zero/images/5/5e/Mindscape_Hugo_Vlad_Full.png"
   },
   {
