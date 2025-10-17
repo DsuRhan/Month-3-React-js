@@ -127,8 +127,8 @@ export const agents: Agent[] = [
   },
   {
     name: "Tsukishiro Yanagi",
-    partial: "https://images.weserv.nl/?url=https://static.wikia.nocookie.net/zenless-zone-zero/images/3/31/Mindscape_Ukinami_Yuzuha_Partial.png/revision/latest/scale-to-width-down/1000?cb=20240710201532",
-    full:"https://images.weserv.nl/?url=https://static.wikia.nocookie.net/zenless-zone-zero/images/3/31/Mindscape_Ukinami_Yuzuha_Partial.png/revision/latest/scale-to-width-down/1000?cb=20240710201532"
+    partial: "https://images.weserv.nl/?url=https://static.wikia.nocookie.net/zenless-zone-zero/images/f/fb/Mindscape_Tsukishiro_Yanagi_Partial.png/revision/latest/scale-to-width-down/1000?cb=20241106023948",
+    full:"https://images.weserv.nl/?url=https://static.wikia.nocookie.net/zenless-zone-zero/images/5/53/Mindscape_Tsukishiro_Yanagi_Full.png/revision/latest/scale-to-width-down/1000?cb=20241106024040"
   },
   {
     name: "Ukinami Yuzuha",
