@@ -23,7 +23,7 @@ const Popup = React.memo(({ agent, onClose }: PopupProps) => {
         </h2>
         <p className="mb-4 text-gray-600">{agent.name} — S Rank Agent</p>
 
-        <div className="relative group min-w-100 max-w-90vh">
+        <div className="relative group min-w-60 max-w-90vh">
           <img
             src={agent.partial}
             alt={agent.name}
