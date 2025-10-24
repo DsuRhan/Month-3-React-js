@@ -125,7 +125,7 @@ export const egoData: CharacterEgo[] = [
       {name: "Fell Bullet" },
       {name: "Telepole" },
       {name: "Ya Śūnyatā Tad Rūpam" },
-      {name: "Assymetrical Inertia" },
+      {name: "Asymmetrical Inertia" },
       {name: "Binds" },
     ]
   },
