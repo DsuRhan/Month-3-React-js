@@ -65,6 +65,9 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
   const [hoveredCell, setHoveredCell] = useState<[number, number] | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const startX = Math.floor(size / 2);
+  const startY = Math.floor(size / 2);
+
   const handleStart = () => {
     setStarted(true);
     setIsPlaying(true);
@@ -96,10 +99,7 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
     else if (value === 2) handleWin();
   };
 
-  const startX = Math.floor(size / 2);
-  const startY = Math.floor(size / 2);
-
-  // 🟡 handle drag di HP
+  // 🟢 HP / touch handler
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isPlaying || !containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -110,8 +110,10 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
     if (x >= 0 && y >= 0 && x < size && y < size) handlePointerMove(x, y);
   };
 
+  const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
   return (
-    <div className="flex flex-col items-center gap-4 touch-none select-none">
+    <div className="flex flex-col items-center gap-4 select-none touch-none">
       <button
         onClick={() => {
           regenerate();
@@ -126,7 +128,7 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
 
       <div
         ref={containerRef}
-        onTouchMove={handleTouchMove}
+        onTouchMove={isMobile ? handleTouchMove : undefined}
         style={{
           display: "grid",
           gridTemplateColumns: `repeat(${size}, 20px)`,
@@ -156,7 +158,7 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
                 onPointerDown={() => {
                   if (isStart && !started) handleStart();
                 }}
-                onPointerEnter={() => handlePointerMove(x, y)}
+                onPointerEnter={!isMobile ? () => handlePointerMove(x, y) : undefined}
                 className={`w-5 h-5 transition-colors duration-100 ${bgColor} ${
                   !started && isStart ? "cursor-pointer" : ""
                 }`}
