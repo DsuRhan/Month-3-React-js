@@ -99,9 +99,10 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
     else if (value === 2) handleWin();
   };
 
-  // 🟢 HP / touch handler
+  // 🟢 touch handler HP
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isPlaying || !containerRef.current) return;
+    e.preventDefault(); // mencegah scroll
     const rect = containerRef.current.getBoundingClientRect();
     const touch = e.touches[0];
     const cellSize = rect.width / size;
@@ -113,7 +114,7 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
   const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
   return (
-    <div className="flex flex-col items-center gap-4 select-none touch-none">
+    <div className="flex flex-col items-center gap-4 select-none">
       <button
         onClick={() => {
           regenerate();
@@ -133,6 +134,7 @@ const MazePath: FC<MazePathProps> = ({ onWin, onLose }) => {
           display: "grid",
           gridTemplateColumns: `repeat(${size}, 20px)`,
           gridTemplateRows: `repeat(${size}, 20px)`,
+          touchAction: "none", // penting untuk drag di HP
         }}
         className="border border-gray-700"
         onPointerUp={() => setIsPlaying(false)}
